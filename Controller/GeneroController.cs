@@ -12,7 +12,7 @@ namespace WebApiBiblioteca.Controllers
     [Route("[controller]")]
 
     
-    public class AutorController : ControllerBase
+    public class GeneroController : ControllerBase
     {
         private readonly ILogger<GeneroController> _logger;
         private readonly WebApiBibliotecaContext _context;
@@ -24,7 +24,7 @@ namespace WebApiBiblioteca.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Autor>> Get()
+        public ActionResult<IEnumerable<Genero>> Get()
         {
             var generos = _context.Generos.ToList();
             if(generos is null)
@@ -34,7 +34,7 @@ namespace WebApiBiblioteca.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post(Generos genero){
+        public ActionResult Post(Genero genero){
             _context.Generos.Add(genero);
             _context.SaveChanges();
 

@@ -1,4 +1,10 @@
+using WebApiBiblioteca.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+var connectionString = builder.Configuration.GetConnectionString("PostgreSQL");
+builder.Services.AddDbContext<WebApiBibliotecaContext>(options => options.UseNpgsql(connectionString));
 
 // Add services to the container.
 
@@ -23,3 +29,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+ 

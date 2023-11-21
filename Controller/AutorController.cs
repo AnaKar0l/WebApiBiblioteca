@@ -10,8 +10,6 @@ namespace WebApiBiblioteca.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-
-    
     public class AutorController : ControllerBase
     {
         private readonly ILogger<AutorController> _logger;

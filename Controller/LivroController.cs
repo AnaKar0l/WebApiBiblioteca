@@ -63,7 +63,7 @@ namespace WebApiBiblioteca.Controllers
 
         [HttpDelete("{id:int}")]
         public ActionResult Delete(int id){
-            var livro = _context.Cursos.FirstOrDefault(p => p.ID == id);
+            var livro = _context.Livros.FirstOrDefault(p => p.ID == id);
 
             if(livro is null)
                 return NotFound();
