@@ -16,5 +16,8 @@ namespace WebApiBiblioteca.Context
         public DbSet<Autor>? Autores { get; set; }
 
         public DbSet<Genero>? Generos { get; set; }
+
+        public DbSet<Contato>? Contatos { get; set; }
+
     }
 }

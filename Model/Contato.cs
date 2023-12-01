@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace WebApiBiblioteca.Model
 {
-    public class Contatos
+    public class Contato
     {
         public String? Nome { get; set; }
 
-        public int Contato { get; set; }
+        public int Celular { get; set; }
 
         public String? Email { get; set; }
 
