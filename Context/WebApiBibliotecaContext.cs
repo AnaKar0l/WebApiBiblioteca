@@ -19,5 +19,7 @@ namespace WebApiBiblioteca.Context
 
         public DbSet<Contato>? Contatos { get; set; }
 
+        public DbSet<Empréstimo>? Empréstimos { get; set; }
+
     }
 }

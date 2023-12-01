@@ -10,12 +10,12 @@ namespace WebApiBiblioteca.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ContatosController : ControllerBase
+    public class ContatoController : ControllerBase
     {
-        private readonly ILogger<AutorController> _logger;
+        private readonly ILogger<ContatoController> _logger;
         private readonly WebApiBibliotecaContext _context;
 
-         public ContatosController(ILogger<AutorController> logger, WebApiBibliotecaContext context)
+         public ContatoController(ILogger<ContatoController> logger, WebApiBibliotecaContext context)
         {
             _logger = logger;
             _context = context;
