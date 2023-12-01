@@ -15,7 +15,7 @@ namespace WebApiBiblioteca.Controllers
         private readonly ILogger<EmpréstimoController> _logger;
         private readonly WebApiBibliotecaContext _context;
 
-         public EmpréstimoController(ILogger<EmpréstimoController> logger, WebApiBibliotecaContext context)
+        public EmpréstimoController(ILogger<EmpréstimoController> logger, WebApiBibliotecaContext context)
         {
             _logger = logger;
             _context = context;
@@ -25,32 +25,34 @@ namespace WebApiBiblioteca.Controllers
         public ActionResult<IEnumerable<Empréstimo>> Get()
         {
             var empréstimos = _context.Empréstimos.ToList();
-            if(empréstimos is null)
-                return NotFound();  
+            if (empréstimos is null)
+                return NotFound();
 
             return empréstimos;
         }
 
         [HttpPost]
-        public ActionResult Post(Empréstimo empréstimo){
+        public ActionResult Post(Empréstimo empréstimo)
+        {
             _context.Empréstimos.Add(empréstimo);
             _context.SaveChanges();
 
-            return new CreatedAtRouteResult ("GetEmpréstimo", new{ id = empréstimo.ID}, empréstimo);
+            return new CreatedAtRouteResult("GetEmpréstimo", new { id = empréstimo.ID }, empréstimo);
         }
 
-        [HttpGet ("{id:int}", Name ="GetEmpréstimo")]
+        [HttpGet("{id:int}", Name = "GetEmpréstimo")]
         public ActionResult<Empréstimo> Get(int id)
         {
             var empréstimo = _context.Empréstimos.FirstOrDefault(p => p.ID == id);
-            if(empréstimo is null)
+            if (empréstimo is null)
                 return NotFound("Não foi possível localizar o empréstimo.");
 
-                return empréstimo;
+            return empréstimo;
         }
         [HttpPut("{id:int}")]
-        public ActionResult Put(int id, Empréstimo empréstimo){
-            if(id != empréstimo.ID)
+        public ActionResult Put(int id, Empréstimo empréstimo)
+        {
+            if (id != empréstimo.ID)
                 return BadRequest();
 
             _context.Entry(empréstimo).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
@@ -59,11 +61,12 @@ namespace WebApiBiblioteca.Controllers
             return Ok(empréstimo);
         }
 
-        [HttpDelete("{id:int}")]
-        public ActionResult Delete(int id){
+        [HttpDelete("{id:id}")]
+        public ActionResult Delete(int id)
+        {
             var empréstimo = _context.Empréstimos.FirstOrDefault(p => p.ID == id);
 
-            if(empréstimo is null)
+            if (empréstimo is null)
                 return NotFound();
 
             _context.Empréstimos.Remove(empréstimo);
