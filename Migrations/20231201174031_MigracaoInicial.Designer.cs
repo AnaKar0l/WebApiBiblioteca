@@ -12,7 +12,7 @@ using WebApiBiblioteca.Context;
 namespace WebApiBiblioteca.Migrations
 {
     [DbContext(typeof(WebApiBibliotecaContext))]
-    [Migration("20231121140513_MigracaoInicial")]
+    [Migration("20231201174031_MigracaoInicial")]
     partial class MigracaoInicial
     {
         /// <inheritdoc />
@@ -44,6 +44,53 @@ namespace WebApiBiblioteca.Migrations
                     b.HasIndex("LivroID");
 
                     b.ToTable("Autores");
+                });
+
+            modelBuilder.Entity("WebApiBiblioteca.Model.Contato", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("Celular")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("text");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Contatos");
+                });
+
+            modelBuilder.Entity("WebApiBiblioteca.Model.Empréstimo", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ID"));
+
+                    b.Property<DateTime?>("DataDevolução")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("DataEmpréstimo")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Título")
+                        .HasColumnType("text");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Empréstimos");
                 });
 
             modelBuilder.Entity("WebApiBiblioteca.Model.Genero", b =>
