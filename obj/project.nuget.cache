@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rH2uwuqmrpKwGwcdjLV+z71KTUviIY38sQ6OQel/UwvqI/ITM4u5O4P+p+OJDxpKf1EK6+kX9O/O0uU8k6kO6w==",
+  "dgSpecHash": "VSZEQe/nga17X+b8G0Lgfv9mjvzfpKdDlqq7xFV/cXr2MGwTVRZIzmtDKCx6lQiTyKafWzpmcK5W5Hj3MY0f6Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\20201034010017\\WebApiBiblioteca\\WebApiBiblioteca.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,11 @@
     "C:\\Users\\20201034010017\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "C:\\Users\\20201034010017\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\20201034010017\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\20201034010017\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
+    "C:\\Users\\20201034010017\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\20201034010017\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.14\\microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\20201034010017\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.14\\microsoft.windowsdesktop.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\20201034010017\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.14\\microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "C:\\Users\\20201034010017\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.14\\microsoft.netcore.app.host.win-x64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
