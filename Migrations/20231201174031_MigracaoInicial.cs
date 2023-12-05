@@ -13,6 +13,37 @@ namespace WebApiBiblioteca.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Contatos",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Nome = table.Column<string>(type: "text", nullable: true),
+                    Celular = table.Column<int>(type: "integer", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Contatos", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Empréstimos",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Nome = table.Column<string>(type: "text", nullable: true),
+                    Título = table.Column<string>(type: "text", nullable: true),
+                    DataEmpréstimo = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    DataDevolução = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Empréstimos", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Livros",
                 columns: table => new
                 {
@@ -80,6 +111,12 @@ namespace WebApiBiblioteca.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Autores");
+
+            migrationBuilder.DropTable(
+                name: "Contatos");
+
+            migrationBuilder.DropTable(
+                name: "Empréstimos");
 
             migrationBuilder.DropTable(
                 name: "Generos");

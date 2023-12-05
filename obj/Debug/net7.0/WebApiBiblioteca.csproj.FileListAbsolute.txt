@@ -41,3 +41,4 @@ C:\Users\20201034010017\WebApiBiblioteca\obj\Debug\net7.0\refint\WebApiBibliotec
 C:\Users\20201034010017\WebApiBiblioteca\obj\Debug\net7.0\WebApiBiblioteca.pdb
 C:\Users\20201034010017\WebApiBiblioteca\obj\Debug\net7.0\WebApiBiblioteca.genruntimeconfig.cache
 C:\Users\20201034010017\WebApiBiblioteca\obj\Debug\net7.0\ref\WebApiBiblioteca.dll
+C:\Users\20201034010017\WebApiBiblioteca\obj\Debug\net7.0\WebApiBiblioteca.sourcelink.json
